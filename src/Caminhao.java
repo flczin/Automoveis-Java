@@ -33,7 +33,7 @@ public class Caminhao extends Veiculo {
 
     @Override
     public void ligar() {
-        if (this.ligado == true) {
+        if (this.ligado) {
             System.out.println("Veículo placa " + this.placa + " já está ligado!");
         } else {
             System.out.println("Veículo placa " + this.placa + " foi ligado!");
@@ -45,7 +45,7 @@ public class Caminhao extends Veiculo {
 
     @Override
     public void desligar() {
-        if (this.ligado == false) {
+        if (!this.ligado) {
             System.out.println("Veículo placa " + this.placa + " já está desligado!");
         } else {
             System.out.println("Veículo placa " + this.placa + " foi desligado!");

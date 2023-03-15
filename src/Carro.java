@@ -38,10 +38,11 @@ public class Carro extends Veiculo {
 
     @Override
     public void acelerar() {
-        if (this.ligado) {
+        if (this.ligado && !this.portaMalas) {
             System.out.println("Veículo placa " + this.placa + " está acelerando!");
             this.acelerando = true;
         } else {
+            this.fecharPortaMalas();
             this.ligar();
             this.acelerar();
         }
